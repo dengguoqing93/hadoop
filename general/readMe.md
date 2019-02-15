@@ -12,3 +12,7 @@
 - 将本地文件复制到Hadoop文件系统
 
     `hadoop jar general-1.0-SNAPSHOT.jar org.guoqing.map.FileCopyWithProgress 1400-8.txt hdfs://master:9000/user/dengguoqing/1400-8.txt`
+    
+- 显示Hadoop文件系统中一组路径的文件信息
+
+    `hadoop jar general-1.0-SNAPSHOT.jar org.guoqing.map.ListStatus hdfs://master:9000/user/dengguoqing hdfs://master:9000/user`
