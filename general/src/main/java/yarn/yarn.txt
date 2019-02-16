@@ -1,0 +1,15 @@
+使用yarn的优点：
+    1、可拓展性
+    2、可用性
+    3、利用率
+    4、多租户
+
+YARN中的调度
+    1、FIFO调度器（FIFO Scheduler)
+        优点：简单易懂，不需要任何配置
+        缺点：不适合共享集群
+    2、容量调度器(Capacity Scheduler)：允许多个组织共享一个Hadoop集群，每个组织
+    可以分配到全部资源的一部分。
+    3、公平调度器(Fair Scheduler)：旨在为所有运行的应用公平分配资源
+        启用公平调度器：由属性yarn.resourcemanager.scheduler.class的设置决定
+        将yarn-site.xml文件中的yarn.resourcemanager.scheduler.class设置为org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.FairScheduler

@@ -10,14 +10,14 @@ import org.apache.hadoop.util.ReflectionUtils;
 import java.net.URI;
 
 /**
- * ${DESCRIPTION}
+ * 读取SequenceFile
  *
  * @author dengguoqing
  * @date 2018/11/28
  */
 public class SequenceFileReadDemo {
     public static void main(String[] args) throws Exception {
-        String uri = "number.seq";
+        String uri = args[0];
         Configuration conf = new Configuration();
         FileSystem fs = FileSystem.get(URI.create(uri), conf);
         Path path = new Path(uri);
