@@ -10,22 +10,19 @@
     <description>hadoop学习代码</description>
     <modules>
         <module>guide</module>
-        <module>mr-dev</module>
-        <module>javaTest</module>
-        <module>common</module>
-        <module>avro</module>
         <module>real-world</module>
         <module>general</module>
+        <module>algorithms</module>
     </modules>
-    <packaging>pom</packaging>
 
+    <packaging>pom</packaging>
 
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <hadoop.version>3.1.0</hadoop.version>
+        <hadoop.version>3.0.2</hadoop.version>
         <junit.version>4.12</junit.version>
-        <hadoop-core.version>1.2.1</hadoop-core.version>
+        <mockito.version>2.24.0</mockito.version>
     </properties>
 
     <dependencyManagement>
@@ -41,12 +38,6 @@
                 <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-client</artifactId>
                 <version>${hadoop.version}</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-core -->
-            <dependency>
-                <groupId>org.apache.hadoop</groupId>
-                <artifactId>hadoop-core</artifactId>
-                <version>${hadoop-core.version}</version>
             </dependency>
             <!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-mapreduce-client-core -->
             <dependency>
@@ -68,13 +59,6 @@
                 <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/org.apache.mrunit/mrunit -->
-            <dependency>
-                <groupId>org.apache.mrunit</groupId>
-                <artifactId>mrunit</artifactId>
-                <version>1.1.0</version>
-                <scope>test</scope>
-            </dependency>
 
             <!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-minicluster -->
             <dependency>
@@ -89,6 +73,13 @@
     </dependencyManagement>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
 
         <dependency>
             <groupId>org.apache.hadoop</groupId>
@@ -99,11 +90,7 @@
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-client</artifactId>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-core -->
-        <dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-core</artifactId>
-        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-mapreduce-client-core -->
         <dependency>
             <groupId>org.apache.hadoop</groupId>
@@ -113,6 +100,15 @@
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-hdfs</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-minicluster</artifactId>
         </dependency>
     </dependencies>
 
