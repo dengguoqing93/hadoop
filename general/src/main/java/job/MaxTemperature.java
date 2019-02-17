@@ -17,11 +17,13 @@ public class MaxTemperature {
 
     public static void main(String[] args) throws Exception {
         if (args.length != 2) {
-            System.err.println("Usage: MaxTemperature <input path> <output path>");
-            System.exit(-1);
+            args = new String[]{
+                 "file:///Users/dengguoqing/IdeaProjects/hadoop/general/src/main/resources/sample.txt",
+                    "file:///Users/dengguoqing/IdeaProjects/hadoop/general/src/main/resources/output"
+            };
         }
 
-        Job job = new Job();
+        Job job = Job.getInstance();
         job.setJarByClass(MaxTemperature.class);
         job.setJobName("Max temperature");
 

@@ -11,5 +11,17 @@
 
     <artifactId>general</artifactId>
 
-
+    <!--指定jar包输出位置或其他配置-->
+    <!-- <build>
+         <plugins>
+             <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-jar-plugin</artifactId>
+                 <version>3.1.1</version>
+                 <configuration>
+                     <outputDirectory>${basedir}</outputDirectory>
+                 </configuration>
+             </plugin>
+         </plugins>
+     </build>-->
 </project>

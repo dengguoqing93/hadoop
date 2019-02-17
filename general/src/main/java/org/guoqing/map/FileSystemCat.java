@@ -20,7 +20,7 @@ public class FileSystemCat {
     public static void main(String[] args) throws IOException {
         String uri;
         if (0 == args.length){
-            uri = "hdfs://master:9000/user/dengguoqing/quangle.txt";
+            uri = "file:///Users/dengguoqing/IdeaProjects/hadoop/general/src/main/resources/quangle.txt";
         }else {
             uri = args[0];
         }
