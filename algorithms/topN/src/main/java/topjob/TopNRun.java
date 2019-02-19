@@ -1,5 +1,6 @@
 package topjob;
 
+import compoent.MapperReducerDriver;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 
@@ -17,7 +18,7 @@ import java.io.IOException;
  * @author dengguoqing
  * @date 2019/2/19
  */
-public class TopNRun {
+public class TopNRun{
     public static void main(
             String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         Configuration conf = new Configuration();
@@ -25,6 +26,7 @@ public class TopNRun {
         Job job = Job.getInstance(conf);
         job.setJobName("Top 10 List");
         job.setJarByClass(TopNRun.class);
+
 
         FileInputFormat.addInputPath(job, new Path(
                 "file:///Users/dengguoqing/IdeaProjects/hadoop/algorithms/topN/src/main/resources/sample_input.txt"));

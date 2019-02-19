@@ -1,10 +1,14 @@
 package topjob;
 
+import compoent.MapperReducerDriver;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
@@ -14,7 +18,7 @@ import org.apache.hadoop.util.ToolRunner;
  * @author dengguoqing
  * @date 2019/2/19
  */
-public class TopNDriver extends Configured implements Tool {
+public class TopNDriver extends Configured implements Tool, MapperReducerDriver {
 
     @Override
     public int run(String[] strings) throws Exception {
@@ -26,6 +30,8 @@ public class TopNDriver extends Configured implements Tool {
         Job job = Job.getInstance(conf);
         job.setJobName("Top N");
         job.setJarByClass(getClass());
+
+        configPath(strings, job);
 
         job.setMapOutputKeyClass(NullWritable.class);
         job.setMapOutputValueClass(Text.class);
