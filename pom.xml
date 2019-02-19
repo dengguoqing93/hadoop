@@ -13,6 +13,7 @@
         <module>real-world</module>
         <module>general</module>
         <module>algorithms</module>
+        <module>common</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -109,6 +110,10 @@
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-minicluster</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.guoqing</groupId>
+            <artifactId>common</artifactId>
         </dependency>
     </dependencies>
 

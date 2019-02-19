@@ -35,7 +35,6 @@ public class SecondarySortDriver extends Configured implements Tool {
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
 
-
         job.setMapperClass(SecondaryMapper.class);
         job.setReducerClass(SecondaryReducer.class);
         job.setPartitionerClass(NaturalKeyPartitioner.class);
