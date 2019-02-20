@@ -18,9 +18,8 @@ public class DemoAvroParquet {
 
     public static void main(String[] args) throws Exception {
         Schema.Parser parser = new Schema.Parser();
-        DemoAvroParquet demoAvroParquet = new DemoAvroParquet();
         Schema schema = parser.parse(
-                demoAvroParquet.getClass().getResourceAsStream("StringPair.avsc"));
+                DemoAvroParquet.class.getResourceAsStream("StringPair.avsc"));
         GenericRecord datum = new GenericData.Record(schema);
         datum.put("left", "L");
         datum.put("right", "R");

@@ -8,7 +8,6 @@ import org.apache.hadoop.io.WritableComparable;
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
-import java.util.Date;
 
 /**
  * 排序对象
@@ -74,10 +73,6 @@ public class DateTemperaturePair implements Writable,
         if (compareValue == 0) {
             compareValue = temperature.compareTo(pair.getTemperature());
         }
-        /*
-        升序排序
-         */
-        //return compareValue;
         /*
         降序排序
          */
