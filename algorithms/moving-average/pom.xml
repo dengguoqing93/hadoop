@@ -3,21 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>hadoop</artifactId>
+        <artifactId>algorithms</artifactId>
         <groupId>org.guo</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <packaging>pom</packaging>
-    <modules>
-        <module>secondary-sort</module>
-        <module>sorted</module>
-        <module>topN</module>
-        <module>left-join</module>
-        <module>order-inversion</module>
-        <module>moving-average</module>
-    </modules>
-    <artifactId>algorithms</artifactId>
+
+    <artifactId>moving-average</artifactId>
 
 
 </project>

@@ -1,0 +1,2 @@
++ 当mapper输出的键和值不同时，在设置作业时应注意设置mapOutputKey和mapOutputValue
+ 
