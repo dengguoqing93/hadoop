@@ -1,4 +1,4 @@
-package job;
+package step1;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
@@ -29,16 +29,13 @@ public class SecondarySortDriver extends Configured implements Tool {
         FileInputFormat.setInputPaths(job, inputPath);
         FileOutputFormat.setOutputPath(job, outputPath);
 
-        job.setMapOutputKeyClass(CompositeKey.class);
-        job.setMapOutputValueClass(NaturalValue.class);
-
-        job.setOutputKeyClass(Text.class);
+        job.setOutputKeyClass(DateTemperaturePair.class);
         job.setOutputValueClass(Text.class);
 
         job.setMapperClass(SecondaryMapper.class);
         job.setReducerClass(SecondaryReducer.class);
-        job.setPartitionerClass(NaturalKeyPartitioner.class);
-        job.setGroupingComparatorClass(NaturalKeyGroupingComparator.class);
+        job.setPartitionerClass(DateTemperaturePartitioner.class);
+        job.setGroupingComparatorClass(DateTemperatureGroupingComparator.class);
 
         return job.waitForCompletion(true) ? 0 : 1;
     }

@@ -21,7 +21,7 @@
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <hadoop.version>3.0.2</hadoop.version>
+        <hadoop.version>3.2.0</hadoop.version>
         <junit.version>4.12</junit.version>
         <mockito.version>2.24.0</mockito.version>
     </properties>
@@ -113,10 +113,12 @@
         </dependency>
 
         <dependency>
-            <groupId>org.guo</groupId>
-            <artifactId>common</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>edu.umd</groupId>
+            <artifactId>cloud9</artifactId>
+            <version>1.3.2</version>
         </dependency>
+
+
     </dependencies>
 
     <build>
