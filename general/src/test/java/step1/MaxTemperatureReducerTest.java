@@ -1,14 +1,11 @@
-package job;
+package step1;
 
-import com.sun.org.apache.regexp.internal.RE;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 import org.junit.Test;
 import org.junit.Before;
-import org.junit.After;
 
-import java.security.Key;
 import java.util.Arrays;
 import java.util.List;
 

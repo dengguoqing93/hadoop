@@ -17,6 +17,7 @@
         <module>order-inversion</module>
         <module>moving-average</module>
         <module>MBA</module>
+        <module>common-friend</module>
     </modules>
     <artifactId>algorithms</artifactId>
 

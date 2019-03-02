@@ -1,8 +1,8 @@
 package io;
 
-import job.MaxTemperature;
-import job.MaxTemperatureMapper;
-import job.MaxTemperatureReducer;
+import step1.MaxTemperature;
+import step1.MaxTemperatureMapper;
+import step1.MaxTemperatureReducer;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
